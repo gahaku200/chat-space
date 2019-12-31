@@ -109,12 +109,13 @@
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding: 35px 40px;
+    overflow: scroll;
     .message {
       margin-bottom: 46px;
-      &__upper-info {
+      .upper-message {
         display: flex;
         margin-bottom: 12px;
-        &__talker {
+        &__user-name {
           color: #333333;
           font-size: 16px;
           font-weight: bold;
@@ -125,7 +126,7 @@
           margin-left: 10px;
         }
       }
-      &__text {
+      .lower-message {
         color: $color4;
           font-size: 14px;
       }
@@ -148,14 +149,17 @@
           color: $color4;
           border-style: none;
         }
-        &__image{
-          font-size: 1.3rem;
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-          &__file {
-            display: none;
+        .form-mask {
+          position: relative;
+          &__image{
+            font-size: 1.3rem;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            &__file {
+              display: none;
+            }
           }
         }
       }
